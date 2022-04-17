@@ -1,5 +1,5 @@
 # super-awesome-pharmacy
-
+# I think
 # This is setup with tailwind css, scss, nuxt-auth jwt, i18n(strategy no_prefix)
 
 ## Build Setup
