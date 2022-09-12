@@ -3,7 +3,17 @@
     <div class="header px-3 py-4">
       <img src="logo.png" alt="logo" class="logo" />
     </div>
-    <div class="content"></div>
+    <div class="content w-1/1">
+      <div class="w-1/2 px-2">
+        <line-chart
+          class="chart"
+          :chart-options="chartOptions"
+          :chart-data="chartData"
+          chart-id="chartId"
+        />
+      </div>
+      <div class="w-1/2 px-2"></div>
+    </div>
   </div>
 </template>
 
@@ -11,16 +21,15 @@
 export default {
   name: "IndexPage",
   data() {
-    return {
-      chartData: {
-        datasets: [
-          {
-            label: "Title",
-            data: [45, 55, 48, 35, 12],
-          },
-        ],
-      },
-    };
+    return {};
+  },
+  computed: {
+    chartData() {
+      return JSON.parse(JSON.stringify(this.$store.state.lineChartData));
+    },
+    chartOptions() {
+      return JSON.parse(JSON.stringify(this.$store.state.lineChartOptions));
+    },
   },
 };
 </script>
