@@ -1,21 +1,13 @@
-# super-awesome-pharmacy
-# This is setup with tailwind css, scss, nuxt-auth jwt, i18n(strategy no_prefix)
+# converter-front
 
 ## Build Setup
 
 ```bash
 # install dependencies
-$ yarn install
+$ npm install
 
 # serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+$ npm run dev
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
