@@ -17,16 +17,22 @@
           <div class="bg-black text-white text-4xl py-1">Total</div>
           <div class="border-2 text-8xl">525235</div>
         </div>
+
+        <MyTable class="mt-5 overflow-y-scroll h-1/2" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import MyTable from "~/components/MyTable.vue";
 export default {
   name: "IndexPage",
   data() {
     return {};
+  },
+  mounted() {
+    this.$store.dispatch("doPollingSpreadsheet");
   },
   computed: {
     chartData() {
@@ -36,6 +42,7 @@ export default {
       return JSON.parse(JSON.stringify(this.$store.state.lineChartOptions));
     },
   },
+  components: { MyTable },
 };
 </script>
 

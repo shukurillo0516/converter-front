@@ -40,14 +40,15 @@ export default () => ({
     },
   },
   lineChartData: {
-    labels: ["1", "2", "3"],
+    labels: [],
     datasets: [
       {
-        label: "Заказы",
-        data: [200, 300, 200],
+        label: "Цена в рублях",
+        data: [],
         borderColor: "rgb(46, 170, 220)",
         backgroundColor: "rgb(46, 170, 230)",
       },
     ],
   },
+  tableData: [],
 });
