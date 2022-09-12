@@ -15,7 +15,7 @@
       <div class="w-1/2 px-2">
         <div name="total-display" class="w-2/3 m-auto mt-7 text-center">
           <div class="bg-black text-white text-4xl py-1">Total</div>
-          <div class="border-2 text-8xl">525235</div>
+          <div class="border-2 text-8xl">{{ orderNumber }}</div>
         </div>
 
         <MyTable class="mt-5 overflow-y-scroll h-1/2" />
@@ -40,6 +40,9 @@ export default {
     },
     chartOptions() {
       return JSON.parse(JSON.stringify(this.$store.state.lineChartOptions));
+    },
+    orderNumber() {
+      return this.$store.state.tableData.length;
     },
   },
   components: { MyTable },
